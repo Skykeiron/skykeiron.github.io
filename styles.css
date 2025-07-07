@@ -91,3 +91,9 @@ nav {
   margin-top: 2px;
   user-select: none;
 }
+
+/* Empty slots are invisible and unclickable but keep spacing */
+.slot.empty {
+  opacity: 0;
+  pointer-events: none;
+}
