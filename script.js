@@ -17,10 +17,12 @@ const gearData = {
   }
 };
 
+// Load saved data from localStorage if available
 const savedData = localStorage.getItem('gearData');
 if (savedData) Object.assign(gearData, JSON.parse(savedData));
 
 function renderTab(tab) {
+  console.log('Rendering tab:', tab);
   const container = document.getElementById(tab);
   container.innerHTML = '';
   const slots = gearData[tab];
@@ -31,6 +33,7 @@ function renderTab(tab) {
     const img = document.createElement('img');
     img.src = item.image;
     img.alt = item.name;
+    img.title = `Click to mark as ${item.obtained ? 'unobtained' : 'obtained'}`;
     img.onclick = () => toggleObtained(tab, slot);
     const label = document.createElement('div');
     label.textContent = item.name;
@@ -47,20 +50,23 @@ function toggleObtained(tab, slot) {
 }
 
 function switchTab(tab) {
+  // Remove active class from all tabs and tab content
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
   document.querySelectorAll('.tabs li').forEach(li => li.classList.remove('active'));
 
+  // Add active class to selected tab and its content
   document.getElementById(tab).classList.add('active');
   document.querySelector(`.tabs li[data-tab="${tab}"]`).classList.add('active');
 
   renderTab(tab);
 }
 
+// Setup event listeners for tab buttons
 document.querySelectorAll('.tabs li').forEach(li => {
   li.addEventListener('click', () => {
     switchTab(li.getAttribute('data-tab'));
   });
 });
 
-// Initial render for all tabs (renders but shows only active tab)
-['magic', 'ranged', 'melee', 'necromancy'].forEach(renderTab);
+// Initial render: render only the default active tab content (magic)
+renderTab('magic');
