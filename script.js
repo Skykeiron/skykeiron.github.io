@@ -9,12 +9,12 @@ const slotOrder = [
 const gearData = {
   magic: {
     empty1: null,
-    helmet: { name: 'Virtus Mask', obtained: false, image: 'https://runescape.wiki/images/Virtus_mask.png?03dea' },
-    pocket: null,
-    cape: null,
+    helmet: { name: 'Elite Tectonic Mask', obtained: false, image: 'https://runescape.wiki/images/Elite_tectonic_mask.png?19656' },
+    pocket: { name: 'Erethdor's grimoire', obtained: false, image: 'https://runescape.wiki/images/Erethdor%27s_grimoire_%28token%29.png?d18a8' },
+    cape: { name: 'Erethdor's grimoire', obtained: false, image: 'https://runescape.wiki/images/Igneous_Kal-Ket.png?e34c7' },
     amulet: null,
     ammo: null,
-    weapon: { name: 'Noxious Staff', obtained: false, image: 'https://runescape.wiki/images/Noxious_staff.png?aa951' },
+    weapon: { name: 'Fractured Staff of Armadyl', obtained: false, image: 'https://runescape.wiki/images/Fractured_Staff_of_Armadyl.png?50e28' },
     body: null,
     offhand: null,
     empty2: null,
