@@ -1,36 +1,45 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #1a1a1a;
-  color: #fff;
-  text-align: center;
+  background-color: #0d1117;
+  color: white;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
+nav {
+  background-color: #161b22;
+  width: 100%;
+  padding: 10px 0;
 }
 
 .tabs {
+  list-style: none;
   display: flex;
   justify-content: center;
-  list-style: none;
   padding: 0;
-  margin-bottom: 20px;
+  margin: 0;
 }
 
 .tabs li {
-  padding: 10px 20px;
-  background: #333;
-  margin: 0 5px;
+  margin: 0 15px;
   cursor: pointer;
+  padding: 5px 10px;
   border-radius: 5px;
 }
 
 .tabs li.active {
-  background: #555;
+  background-color: #238636;
+  color: white;
+}
+
+#content {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
 }
 
 .tab {
@@ -39,32 +48,40 @@ body {
 
 .tab.active {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  justify-items: center;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(5, 80px);
+  gap: 10px;
+  justify-content: center;
 }
 
 .slot {
+  width: 80px;
+  height: 80px;
+  background-color: #1e2228;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 120px;
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+  color: white;
+  position: relative;
 }
 
 .slot img {
-  width: 64px;
-  height: 64px;
-  margin-bottom: 5px;
-  border-radius: 4px;
-  transition: filter 0.3s, border 0.3s;
-}
-
-.slot.unobtained img {
+  max-width: 48px;
+  max-height: 48px;
   filter: grayscale(100%);
-  border: 2px solid transparent;
+  transition: filter 0.3s, box-shadow 0.3s;
+  cursor: pointer;
 }
 
 .slot.obtained img {
   filter: none;
-  border: 2px solid limegreen;
+  box-shadow: 0 0 5px 2px #00ff00;
+}
+
+.slot div {
+  margin-top: 4px;
 }
