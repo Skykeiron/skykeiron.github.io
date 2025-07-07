@@ -38,7 +38,7 @@ const gearData = {
     cape: null,
     neck: null,
     ammo: null,
-    weapon: { name: 'Noxious Scythe', obtained: false, image: 'https://runescape.wiki/images/Noxious_Scythe.png' },
+    weapon: { name: 'Noxious Scythe', obtained: false, image: 'https://runescape.wiki/images/Noxious_scythe.png' },
     body: null,
     shield: null,
     legs: null,
