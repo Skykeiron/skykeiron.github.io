@@ -2,8 +2,8 @@ const gearData = {
   magic: {
     empty1: null,
     helmet: { name: 'Elite tectonic mask', obtained: false, image: 'https://runescape.wiki/images/Elite_tectonic_mask.png?19656' },
-    pocket: { name: 'Erethdor's grimoire', obtained: false, image: 'https://runescape.wiki/images/Erethdor%27s_grimoire_%28token%29.png?d18a8' },
-    cape: { name: 'Erethdor's grimoire', obtained: false, image: 'https://runescape.wiki/images/Igneous_Kal-Ket.png?e34c7' },
+    pocket: { name: "Erethdor's grimoire", obtained: false, image: "https://runescape.wiki/images/Erethdor%27s_grimoire_%28token%29.png?d18a8" },
+    cape: { name: 'Igneous Kal-Ket', obtained: false, image: 'https://runescape.wiki/images/Igneous_Kal-Ket.png?e34c7' },
     amulet: { name: 'Essence of Finality', obtained: false, image: 'https://runescape.wiki/images/Essence_of_Finality_amulet_%28blue%29.png?77834' },
     ammo: null,
     weapon: { name: 'Fractured Staff of Armadyl', obtained: false, image: 'https://runescape.wiki/images/Fractured_Staff_of_Armadyl.png?50e28' },
