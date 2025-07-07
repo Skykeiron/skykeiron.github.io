@@ -1,0 +1,45 @@
+body {
+  font-family: sans-serif;
+  padding: 20px;
+}
+nav .tabs {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+}
+nav .tabs li {
+  cursor: pointer;
+  padding: 10px 20px;
+  border-bottom: 2px solid transparent;
+}
+nav .tabs .active {
+  font-weight: bold;
+  border-color: #3498db;
+}
+#content {
+  margin-top: 20px;
+}
+.slot {
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
+}
+.slot img {
+  width: 64px;
+  height: 64px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: filter 0.2s, border-color 0.2s;
+}
+.unobtained img {
+  filter: grayscale(100%);
+}
+.obtained img {
+  filter: none;
+  border-color: limegreen;
+}
+.slot-name {
+  margin-top: 5px;
+  font-size: 14px;
+}
