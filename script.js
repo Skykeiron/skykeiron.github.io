@@ -14,7 +14,7 @@ const gearData = {
     empty3: null,
     gloves: { name: 'Masterwork magic gloves', obtained: false, image: 'https://runescape.wiki/images/Masterwork_magic_gloves.png?a406e' },
     boots: { name: 'Masterwork magic boots', obtained: false, image: 'https://runescape.wiki/images/Masterwork_magic_boots.png?08a82' },
-    ring: { name: 'Reaver's ring', obtained: false, image: 'https://runescape.wiki/images/Reaver%27s_ring.png?973ed' }
+    ring: { name: "Reaver's ring", obtained: false, image: 'https://runescape.wiki/images/Reaver%27s_ring.png?973ed' }
   },
   ranged: {
     helmet: { name: 'Pernix Cowl', obtained: false, image: 'https://runescape.wiki/images/Pernix_cowl.png?cdf2c' },
