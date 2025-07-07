@@ -41,14 +41,16 @@ body {
 }
 
 .tab.active {
-  display: block;
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  gap: 15px 20px;
+  justify-content: start;
 }
 
 .slot {
-  display: inline-block;
-  width: 120px;
-  margin: 10px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   cursor: pointer;
   transition: filter 0.3s ease, box-shadow 0.3s ease;
 }
@@ -58,20 +60,16 @@ body {
   height: 80px;
   border-radius: 8px;
   border: 2px solid transparent;
-  display: block;
-  margin: 0 auto 5px;
   filter: grayscale(100%);
   transition: filter 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Obtained items show full color and green outline */
 .slot.obtained img {
   filter: none !important;
   border-color: limegreen;
   box-shadow: 0 0 10px limegreen;
 }
 
-/* Placeholder slot styling */
 .slot.placeholder {
   cursor: default;
 }
@@ -79,11 +77,13 @@ body {
 .slot.placeholder img {
   filter: grayscale(80%) brightness(0.5);
   border-color: #555;
-  box-shadow: none;
   opacity: 0.5;
+  box-shadow: none;
 }
 
 .slot div {
   font-size: 14px;
   color: #ccc;
+  text-align: center;
+  margin-top: 5px;
 }
