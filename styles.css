@@ -1,89 +1,93 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #0d1117;
-  color: white;
+  background-color: #1a1a1a;
+  color: #eee;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
 }
 
 nav {
-  background-color: #161b22;
-  width: 100%;
-  padding: 10px 0;
+  margin-top: 20px;
 }
 
 .tabs {
   list-style: none;
-  display: flex;
-  justify-content: center;
   padding: 0;
-  margin: 0;
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .tabs li {
-  margin: 0 15px;
-  cursor: pointer;
-  padding: 5px 10px;
-  border-radius: 5px;
+  padding: 10px 20px;
+  background-color: #333;
+  border-radius: 6px;
+  user-select: none;
+  transition: background-color 0.3s;
 }
 
-.tabs li.active {
-  background-color: #238636;
-  color: white;
+.tabs li.active,
+.tabs li:hover {
+  background-color: #3f9b0b;
+  color: #fff;
 }
 
 #content {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
-  width: 100%;
+  width: 440px; /* roughly 5 slots * 80px + margins */
 }
 
 .tab {
   display: none;
+  flex-wrap: wrap;
+  gap: 5px;
+  max-width: 440px;
+  justify-content: center;
 }
 
 .tab.active {
-  display: grid;
-  grid-template-columns: repeat(3, 80px);
-  grid-template-rows: repeat(5, 80px);
-  gap: 10px;
-  justify-content: center;
+  display: flex;
 }
 
 .slot {
   width: 80px;
   height: 80px;
-  background-color: #1e2228;
-  border-radius: 8px;
+  margin: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 12px;
-  color: white;
-  position: relative;
+  cursor: pointer;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  transition: border-color 0.3s;
+}
+
+.slot.obtained {
+  border-color: #3f9b0b;
 }
 
 .slot img {
-  max-width: 48px;
-  max-height: 48px;
+  width: 64px;
+  height: 64px;
   filter: grayscale(100%);
-  transition: filter 0.3s, box-shadow 0.3s, border 0.3s;
-  cursor: pointer;
-  border: 2px solid white;
-  border-radius: 4px;
+  transition: filter 0.3s;
 }
 
 .slot.obtained img {
   filter: none;
-  border: 2px solid #00ff00;
 }
 
 .slot div {
-  margin-top: 4px;
+  font-size: 10px;
+  text-align: center;
+  margin-top: 2px;
+  user-select: none;
 }
