@@ -1,11 +1,3 @@
-const slotOrder = [
-  'empty1', 'helmet', 'pocket',
-  'cape', 'amulet', 'ammo',
-  'weapon', 'body', 'offhand',
-  'empty2', 'legs', 'empty3',
-  'gloves', 'boots', 'ring'
-];
-
 const gearData = {
   magic: {
     empty1: null,
@@ -25,60 +17,29 @@ const gearData = {
     ring: { name: 'Reaver's ring', obtained: false, image: 'https://runescape.wiki/images/Reaver%27s_ring.png?973ed' }
   },
   ranged: {
-    empty1: null,
     helmet: { name: 'Pernix Cowl', obtained: false, image: 'https://runescape.wiki/images/Pernix_cowl.png?cdf2c' },
-    pocket: null,
-    cape: null,
-    amulet: null,
-    ammo: { name: 'Broad Bolts', obtained: false, image: 'https://runescape.wiki/images/Broad_bolts.png' },
-    weapon: { name: 'Noxious Longbow', obtained: false, image: 'https://runescape.wiki/images/Noxious_longbow.png?d4e2c' },
-    body: null,
-    offhand: null,
-    empty2: null,
-    legs: null,
-    empty3: null,
-    gloves: null,
-    boots: null,
-    ring: null
+    weapon: { name: 'Noxious Longbow', obtained: false, image: 'https://runescape.wiki/images/Noxious_longbow.png?d4e2c' }
   },
   melee: {
-    empty1: null,
     helmet: { name: 'Torva Full Helm', obtained: false, image: 'https://runescape.wiki/images/Torva_full_helm.png?62a9e' },
-    pocket: null,
-    cape: null,
-    amulet: null,
-    ammo: null,
-    weapon: { name: 'Noxious Scythe', obtained: false, image: 'https://runescape.wiki/images/Noxious_Scythe.png' },
-    body: null,
-    offhand: null,
-    empty2: null,
-    legs: null,
-    empty3: null,
-    gloves: null,
-    boots: null,
-    ring: null
+    weapon: { name: 'Noxious Scythe', obtained: false, image: 'https://runescape.wiki/images/Noxious_Scythe.png' }
   },
   necromancy: {
-    empty1: null,
     helmet: { name: 'Deathwarden Hood', obtained: false, image: 'https://runescape.wiki/images/Deathwarden_hood_%28tier_90%29.png?01560' },
-    pocket: null,
-    cape: null,
-    amulet: null,
-    ammo: null,
-    weapon: { name: 'Death Guard', obtained: false, image: 'https://runescape.wiki/images/Death_guard_%28tier_90%29.png?6fda9' },
-    body: null,
-    offhand: null,
-    empty2: null,
-    legs: null,
-    empty3: null,
-    gloves: null,
-    boots: null,
-    ring: null
+    weapon: { name: 'Death Guard', obtained: false, image: 'https://runescape.wiki/images/Death_guard_%28tier_90%29.png?6fda9' }
   }
 };
 
 const savedData = localStorage.getItem('gearData');
 if (savedData) Object.assign(gearData, JSON.parse(savedData));
+
+const slotOrder = [
+  'empty1', 'helmet', 'pocket',
+  'cape', 'amulet', 'ammunition',
+  'weapon', 'body', 'offhand',
+  'empty2', 'legs', 'empty3',
+  'gloves', 'boots', 'ring'
+];
 
 function renderTab(tab) {
   const container = document.getElementById(tab);
@@ -86,28 +47,21 @@ function renderTab(tab) {
   const slots = gearData[tab];
 
   slotOrder.forEach(slot => {
-    const item = slots[slot];
     const slotDiv = document.createElement('div');
+    slotDiv.className = 'slot';
 
+    const item = slots?.[slot];
     if (item) {
-      slotDiv.className = 'slot' + (item.obtained ? ' obtained' : '');
+      slotDiv.classList.add(item.obtained ? 'obtained' : 'unobtained');
+
       const img = document.createElement('img');
       img.src = item.image;
       img.alt = item.name;
-      img.title = `Click to mark as ${item.obtained ? 'unobtained' : 'obtained'}`;
       img.onclick = () => toggleObtained(tab, slot);
+
       const label = document.createElement('div');
       label.textContent = item.name;
-      slotDiv.appendChild(img);
-      slotDiv.appendChild(label);
-    } else {
-      slotDiv.className = 'slot placeholder';
-      const img = document.createElement('img');
-      img.src = 'https://via.placeholder.com/80?text=Empty';
-      img.alt = 'Empty slot';
-      const label = document.createElement('div');
-      // Make nice label for empty slots or use slot name with capitalization
-      label.textContent = slot.startsWith('empty') ? '' : slot.charAt(0).toUpperCase() + slot.slice(1);
+
       slotDiv.appendChild(img);
       slotDiv.appendChild(label);
     }
@@ -122,19 +76,18 @@ function toggleObtained(tab, slot) {
   renderTab(tab);
 }
 
-function switchTab(tab) {
-  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-  document.querySelectorAll('.tabs li').forEach(li => li.classList.remove('active'));
-  document.getElementById(tab).classList.add('active');
-  document.querySelector(`.tabs li[data-tab="${tab}"]`).classList.add('active');
-  renderTab(tab);
-}
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.tabs li').forEach(li => {
+    li.addEventListener('click', () => {
+      const tab = li.getAttribute('data-tab');
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tabs li').forEach(l => l.classList.remove('active'));
 
-document.querySelectorAll('.tabs li').forEach(li => {
-  li.addEventListener('click', () => {
-    switchTab(li.getAttribute('data-tab'));
+      document.getElementById(tab).classList.add('active');
+      li.classList.add('active');
+      renderTab(tab);
+    });
   });
-});
 
-// Initial render
-renderTab('magic');
+  ['magic', 'ranged', 'melee', 'necromancy'].forEach(tab => renderTab(tab));
+});
