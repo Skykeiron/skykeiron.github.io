@@ -1,45 +1,65 @@
 body {
-  font-family: sans-serif;
-  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #eee;
+  margin: 20px;
 }
-nav .tabs {
+
+.tabs {
   list-style: none;
-  display: flex;
-  gap: 20px;
   padding: 0;
+  margin: 0 0 20px 0;
 }
-nav .tabs li {
+
+.tabs li {
   cursor: pointer;
-  padding: 10px 20px;
+  display: inline-block;
+  margin-right: 20px;
+  padding: 10px 15px;
   border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+  user-select: none;
 }
-nav .tabs .active {
+
+.tabs li.active {
   font-weight: bold;
-  border-color: #3498db;
+  border-bottom: 2px solid limegreen;
 }
-#content {
-  margin-top: 20px;
+
+.tab {
+  display: none;
 }
+
+.tab.active {
+  display: block;
+}
+
 .slot {
   display: inline-block;
+  width: 120px;
   margin: 10px;
   text-align: center;
-}
-.slot img {
-  width: 64px;
-  height: 64px;
-  border: 2px solid transparent;
   cursor: pointer;
-  transition: filter 0.2s, border-color 0.2s;
+  transition: filter 0.3s ease, box-shadow 0.3s ease;
 }
-.unobtained img {
+
+.slot img {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  display: block;
+  margin: 0 auto 5px;
   filter: grayscale(100%);
+  transition: filter 0.3s ease, border-color 0.3s ease;
 }
-.obtained img {
+
+.slot.obtained img {
   filter: none;
   border-color: limegreen;
+  box-shadow: 0 0 10px limegreen;
 }
-.slot-name {
-  margin-top: 5px;
+
+.slot div {
   font-size: 14px;
 }
