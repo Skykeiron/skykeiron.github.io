@@ -48,11 +48,19 @@ function toggleObtained(tab, slot) {
 
 function switchTab(tab) {
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-  document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.tabs li').forEach(li => li.classList.remove('active'));
+
   document.getElementById(tab).classList.add('active');
-  [...document.querySelectorAll('nav button')].find(btn => btn.textContent.toLowerCase() === tab).classList.add('active');
+  document.querySelector(`.tabs li[data-tab="${tab}"]`).classList.add('active');
+
   renderTab(tab);
 }
 
-// Initial render
+document.querySelectorAll('.tabs li').forEach(li => {
+  li.addEventListener('click', () => {
+    switchTab(li.getAttribute('data-tab'));
+  });
+});
+
+// Initial render for all tabs (renders but shows only active tab)
 ['magic', 'ranged', 'melee', 'necromancy'].forEach(renderTab);
