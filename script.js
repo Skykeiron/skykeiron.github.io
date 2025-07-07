@@ -2,10 +2,10 @@ const gearData = {
   magic: {
     empty1: null,
     helmet: { name: 'Elite tectonic mask', obtained: false, image: 'https://runescape.wiki/images/Elite_tectonic_mask.png?19656' },
-    pocket: { name: "Erethdor's grimoire", obtained: false, image: "https://runescape.wiki/images/Erethdor%27s_grimoire_%28token%29.png?d18a8" },
-    cape: { name: 'Igneous Kal-Ket', obtained: false, image: 'https://runescape.wiki/images/Igneous_Kal-Ket.png?e34c7' },
+    pocket: { name: "Erethdor's grimoire", obtained: false, image: 'https://runescape.wiki/images/Erethdor%27s_grimoire_%28token%29.png?d18a8' },
+    cape: { name: "Igneous Kal-Ket", obtained: false, image: 'https://runescape.wiki/images/Igneous_Kal-Ket.png?e34c7' },
     amulet: { name: 'Essence of Finality', obtained: false, image: 'https://runescape.wiki/images/Essence_of_Finality_amulet_%28blue%29.png?77834' },
-    ammo: null,
+    ammunition: null,
     weapon: { name: 'Fractured Staff of Armadyl', obtained: false, image: 'https://runescape.wiki/images/Fractured_Staff_of_Armadyl.png?50e28' },
     body: { name: 'Elite tectonic robe top', obtained: false, image: 'https://runescape.wiki/images/Elite_tectonic_robe_top.png?c2107' },
     offhand: null,
@@ -47,25 +47,23 @@ function renderTab(tab) {
   const slots = gearData[tab];
 
   slotOrder.forEach(slot => {
+    const item = slots?.[slot];
+    if (!item) return; // Skip empty/null slots
+
     const slotDiv = document.createElement('div');
     slotDiv.className = 'slot';
+    slotDiv.classList.add(item.obtained ? 'obtained' : 'unobtained');
 
-    const item = slots?.[slot];
-    if (item) {
-      slotDiv.classList.add(item.obtained ? 'obtained' : 'unobtained');
+    const img = document.createElement('img');
+    img.src = item.image;
+    img.alt = item.name;
+    img.onclick = () => toggleObtained(tab, slot);
 
-      const img = document.createElement('img');
-      img.src = item.image;
-      img.alt = item.name;
-      img.onclick = () => toggleObtained(tab, slot);
+    const label = document.createElement('div');
+    label.textContent = item.name;
 
-      const label = document.createElement('div');
-      label.textContent = item.name;
-
-      slotDiv.appendChild(img);
-      slotDiv.appendChild(label);
-    }
-
+    slotDiv.appendChild(img);
+    slotDiv.appendChild(label);
     container.appendChild(slotDiv);
   });
 }
@@ -89,5 +87,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  ['magic', 'ranged', 'melee', 'necromancy'].forEach(tab => renderTab(tab));
+  ['magic', 'ranged', 'melee', 'necromancy'].forEach(tab => {
+    const div = document.createElement('div');
+    div.id = tab;
+    div.className = `tab${tab === 'magic' ? ' active' : ''}`;
+    document.getElementById('content').appendChild(div);
+    renderTab(tab);
+  });
 });
