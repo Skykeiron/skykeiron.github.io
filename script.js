@@ -1,65 +1,79 @@
 const slotOrder = [
-  'helmet', 'cape', 'neck', 'ammo', 'weapon',
-  'body', 'shield', 'legs', 'gloves', 'boots',
-  'ring', 'ammo2'
+  'empty1', 'helmet', 'pocket',
+  'cape', 'amulet', 'ammo',
+  'weapon', 'body', 'offhand',
+  'empty2', 'legs', 'empty3',
+  'gloves', 'boots', 'ring'
 ];
 
 const gearData = {
   magic: {
+    empty1: null,
     helmet: { name: 'Virtus Mask', obtained: false, image: 'https://runescape.wiki/images/Virtus_mask.png?03dea' },
+    pocket: null,
     cape: null,
-    neck: null,
+    amulet: null,
     ammo: null,
     weapon: { name: 'Noxious Staff', obtained: false, image: 'https://runescape.wiki/images/Noxious_staff.png?aa951' },
     body: null,
-    shield: null,
+    offhand: null,
+    empty2: null,
     legs: null,
+    empty3: null,
     gloves: null,
     boots: null,
-    ring: null,
-    ammo2: null
+    ring: null
   },
   ranged: {
+    empty1: null,
     helmet: { name: 'Pernix Cowl', obtained: false, image: 'https://runescape.wiki/images/Pernix_cowl.png?cdf2c' },
+    pocket: null,
     cape: null,
-    neck: null,
+    amulet: null,
     ammo: { name: 'Broad Bolts', obtained: false, image: 'https://runescape.wiki/images/Broad_bolts.png' },
     weapon: { name: 'Noxious Longbow', obtained: false, image: 'https://runescape.wiki/images/Noxious_longbow.png?d4e2c' },
     body: null,
-    shield: null,
+    offhand: null,
+    empty2: null,
     legs: null,
+    empty3: null,
     gloves: null,
     boots: null,
-    ring: null,
-    ammo2: null
+    ring: null
   },
   melee: {
+    empty1: null,
     helmet: { name: 'Torva Full Helm', obtained: false, image: 'https://runescape.wiki/images/Torva_full_helm.png?62a9e' },
+    pocket: null,
     cape: null,
-    neck: null,
+    amulet: null,
     ammo: null,
-    weapon: { name: 'Noxious Scythe', obtained: false, image: 'https://runescape.wiki/images/Noxious_scythe.png' },
+    weapon: { name: 'Noxious Scythe', obtained: false, image: 'https://runescape.wiki/images/Noxious_Scythe.png' },
     body: null,
-    shield: null,
+    offhand: null,
+    empty2: null,
     legs: null,
+    empty3: null,
     gloves: null,
     boots: null,
-    ring: null,
-    ammo2: null
+    ring: null
   },
   necromancy: {
+    empty1: null,
     helmet: { name: 'Deathwarden Hood', obtained: false, image: 'https://runescape.wiki/images/Deathwarden_hood_%28tier_90%29.png?01560' },
+    pocket: null,
     cape: null,
-    neck: null,
+    amulet: null,
     ammo: null,
     weapon: { name: 'Death Guard', obtained: false, image: 'https://runescape.wiki/images/Death_guard_%28tier_90%29.png?6fda9' },
     body: null,
-    shield: null,
+    offhand: null,
+    empty2: null,
     legs: null,
+    empty3: null,
     gloves: null,
     boots: null,
-    ring: null,
-    ammo2: null
+    ring: null
   }
 };
 
@@ -73,7 +87,7 @@ function renderTab(tab) {
 
   slotOrder.forEach(slot => {
     const item = slots[slot];
-    let slotDiv = document.createElement('div');
+    const slotDiv = document.createElement('div');
 
     if (item) {
       slotDiv.className = 'slot' + (item.obtained ? ' obtained' : '');
@@ -87,17 +101,17 @@ function renderTab(tab) {
       slotDiv.appendChild(img);
       slotDiv.appendChild(label);
     } else {
-      // Placeholder for empty slots
       slotDiv.className = 'slot placeholder';
       const img = document.createElement('img');
-      // Transparent pixel or generic placeholder image URL
       img.src = 'https://via.placeholder.com/80?text=Empty';
       img.alt = 'Empty slot';
       const label = document.createElement('div');
-      label.textContent = slot.charAt(0).toUpperCase() + slot.slice(1);
+      // Make nice label for empty slots or use slot name with capitalization
+      label.textContent = slot.startsWith('empty') ? '' : slot.charAt(0).toUpperCase() + slot.slice(1);
       slotDiv.appendChild(img);
       slotDiv.appendChild(label);
     }
+
     container.appendChild(slotDiv);
   });
 }
@@ -122,5 +136,5 @@ document.querySelectorAll('.tabs li').forEach(li => {
   });
 });
 
-// Initial render of default tab
+// Initial render
 renderTab('magic');
