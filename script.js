@@ -17,14 +17,17 @@ const gearData = {
     ring: { name: "Reaver's ring", obtained: false, image: "https://runescape.wiki/images/Reaver%27s_ring.png?973ed" }
   },
   ranged: {
+    empty1: null, empty2: null, empty3: null,
     helmet: { name: 'Pernix Cowl', obtained: false, image: 'https://runescape.wiki/images/Pernix_cowl.png?cdf2c' },
     weapon: { name: 'Noxious Longbow', obtained: false, image: 'https://runescape.wiki/images/Noxious_longbow.png?d4e2c' }
   },
   melee: {
+    empty1: null, empty2: null, empty3: null,
     helmet: { name: 'Torva Full Helm', obtained: false, image: 'https://runescape.wiki/images/Torva_full_helm.png?62a9e' },
     weapon: { name: 'Noxious Scythe', obtained: false, image: 'https://runescape.wiki/images/Noxious_Scythe.png' }
   },
   necromancy: {
+    empty1: null, empty2: null, empty3: null,
     helmet: { name: 'Deathwarden Hood', obtained: false, image: 'https://runescape.wiki/images/Deathwarden_hood_%28tier_90%29.png?01560' },
     weapon: { name: 'Death Guard', obtained: false, image: 'https://runescape.wiki/images/Death_guard_%28tier_90%29.png?6fda9' }
   }
@@ -33,6 +36,7 @@ const gearData = {
 const savedData = localStorage.getItem('gearData');
 if (savedData) Object.assign(gearData, JSON.parse(savedData));
 
+// Define strict slot order to match RS equipment layout
 const slotOrder = [
   'empty1', 'helmet', 'pocket',
   'cape', 'amulet', 'ammunition',
@@ -65,7 +69,7 @@ function renderTab(tab) {
       slotDiv.appendChild(img);
       slotDiv.appendChild(label);
     } else {
-      slotDiv.classList.add('empty'); // empty slots invisible but occupy space
+      slotDiv.classList.add('empty');
     }
 
     container.appendChild(slotDiv);
