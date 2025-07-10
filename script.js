@@ -1,6 +1,33 @@
 const gearData = {
   magic: {
     empty1: null,
+    helmet: { obtained: false, image: 'https://runescape.wiki/images/Elite_tectonic_mask.png?19656' },
+    pocket: { obtained: false, image: "https://runescape.wiki/images/Erethdor%27s_grimoire_%28token%29.png?d18a8" },
+    cape: { obtained: false, image: "https://runescape.wiki/images/Igneous_Kal-Ket.png?e34c7" },
+    amulet: { obtained: false, image: 'https://runescape.wiki/images/Essence_of_Finality_amulet_%28blue%29.png?77834' },
+    ammunition: null,
+    weapon: { obtained: false, image: 'https://runescape.wiki/images/Fractured_Staff_of_Armadyl.png?50e28' },
+    body: { obtained: false, image: 'https://runescape.wiki/images/Elite_tectonic_robe_top.png?c2107' },
+    offhand: null,
+    empty2: null,
+    legs: { obtained: false, image: 'https://runescape.wiki/images/Elite_tectonic_robe_bottom.png?c2107' },
+    empty3: null,
+    gloves: { obtained: false, image: 'https://runescape.wiki/images/Masterwork_magic_gloves.png?a406e' },
+    boots: { obtained: false, image: 'https://runescape.wiki/images/Masterwork_magic_boots.png?08a82' },
+    ring: { obtained: false, image: "https://runescape.wiki/images/Reaver%27s_ring.png?973ed" }
+  },
+  ranged: {
+    empty1: null, empty2: null, empty3: null,
+    helmet: { name: 'Pernix Cowl', obtained: false, image: 'https://runescape.wiki/images/Pernix_cowl.png?cdf2c' },
+    weapon: { name: 'Noxious Longbow', obtained: false, image: 'https://runescape.wiki/images/Noxious_longbow.png?d4e2c' }
+  },
+  melee: {
+    empty1: null, empty2: null, empty3: null,
+    helmet: { name: 'Torva Full Helm', obtained: false, image: 'https://runescape.wiki/images/Torva_full_helm.png?62a9e' },
+    weapon: { name: 'Noxious Scythe', obtained: false, image: 'https://runescape.wiki/images/Noxious_Scythe.png' }
+  },
+  necromancy: {
+    empty1: null,
     helmet: { name: 'Elite tectonic mask', obtained: false, image: 'https://runescape.wiki/images/Elite_tectonic_mask.png?19656' },
     pocket: { name: "Erethdor's grimoire", obtained: false, image: "https://runescape.wiki/images/Erethdor%27s_grimoire_%28token%29.png?d18a8" },
     cape: { name: "Igneous Kal-Ket", obtained: false, image: "https://runescape.wiki/images/Igneous_Kal-Ket.png?e34c7" },
@@ -15,21 +42,6 @@ const gearData = {
     gloves: { name: 'Masterwork magic gloves', obtained: false, image: 'https://runescape.wiki/images/Masterwork_magic_gloves.png?a406e' },
     boots: { name: 'Masterwork magic boots', obtained: false, image: 'https://runescape.wiki/images/Masterwork_magic_boots.png?08a82' },
     ring: { name: "Reaver's ring", obtained: false, image: "https://runescape.wiki/images/Reaver%27s_ring.png?973ed" }
-  },
-  ranged: {
-    empty1: null, empty2: null, empty3: null,
-    helmet: { name: 'Pernix Cowl', obtained: false, image: 'https://runescape.wiki/images/Pernix_cowl.png?cdf2c' },
-    weapon: { name: 'Noxious Longbow', obtained: false, image: 'https://runescape.wiki/images/Noxious_longbow.png?d4e2c' }
-  },
-  melee: {
-    empty1: null, empty2: null, empty3: null,
-    helmet: { name: 'Torva Full Helm', obtained: false, image: 'https://runescape.wiki/images/Torva_full_helm.png?62a9e' },
-    weapon: { name: 'Noxious Scythe', obtained: false, image: 'https://runescape.wiki/images/Noxious_Scythe.png' }
-  },
-  necromancy: {
-    empty1: null, empty2: null, empty3: null,
-    helmet: { name: 'Deathwarden Hood', obtained: false, image: 'https://runescape.wiki/images/Deathwarden_hood_%28tier_90%29.png?01560' },
-    weapon: { name: 'Death Guard', obtained: false, image: 'https://runescape.wiki/images/Death_guard_%28tier_90%29.png?6fda9' }
   }
 };
 
