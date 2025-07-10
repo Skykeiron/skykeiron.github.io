@@ -28,20 +28,20 @@ const gearData = {
   },
   necromancy: {
     empty1: null,
-    helmet: { name: 'Elite tectonic mask', obtained: false, image: 'https://runescape.wiki/images/Elite_tectonic_mask.png?19656' },
-    pocket: { name: "Erethdor's grimoire", obtained: false, image: "https://runescape.wiki/images/Erethdor%27s_grimoire_%28token%29.png?d18a8" },
-    cape: { name: "Igneous Kal-Ket", obtained: false, image: "https://runescape.wiki/images/Igneous_Kal-Ket.png?e34c7" },
-    amulet: { name: 'Essence of Finality', obtained: false, image: 'https://runescape.wiki/images/Essence_of_Finality_amulet_%28blue%29.png?77834' },
+    helmet: { obtained: false, image: 'https://runescape.wiki/images/Crown_of_the_First_Necromancer.png?09787' },
+    pocket: { obtained: false, image: "https://runescape.wiki/images/Erethdor%27s_grimoire_%28token%29.png?d18a8" },
+    cape: { obtained: false, image: "https://runescape.wiki/images/Igneous_Kal-Ket.png?e34c7" },
+    amulet: { obtained: false, image: 'https://runescape.wiki/images/Essence_of_Finality_amulet_%28blue%29.png?77834' },
     ammunition: null,
-    weapon: { name: 'Fractured Staff of Armadyl', obtained: false, image: 'https://runescape.wiki/images/Fractured_Staff_of_Armadyl.png?50e28' },
-    body: { name: 'Elite tectonic robe top', obtained: false, image: 'https://runescape.wiki/images/Elite_tectonic_robe_top.png?c2107' },
-    offhand: null,
+    weapon: { obtained: false, image: 'https://runescape.wiki/images/Omni_guard.png?c184b' },
+    body: { obtained: false, image: 'https://runescape.wiki/images/Robe_top_of_the_First_Necromancer.png?09787' },
+    offhand: obtained: false, image: 'https://runescape.wiki/images/Soulbound_lantern.png?fbe1b',
     empty2: null,
-    legs: { name: 'Elite robe bottom', obtained: false, image: 'https://runescape.wiki/images/Elite_tectonic_robe_bottom.png?c2107' },
+    legs: { obtained: false, image: 'https://runescape.wiki/images/Robe_bottom_of_the_First_Necromancer.png?09787' },
     empty3: null,
-    gloves: { name: 'Masterwork magic gloves', obtained: false, image: 'https://runescape.wiki/images/Masterwork_magic_gloves.png?a406e' },
-    boots: { name: 'Masterwork magic boots', obtained: false, image: 'https://runescape.wiki/images/Masterwork_magic_boots.png?08a82' },
-    ring: { name: "Reaver's ring", obtained: false, image: "https://runescape.wiki/images/Reaver%27s_ring.png?973ed" }
+    gloves: { obtained: false, image: 'https://runescape.wiki/images/Hand_wrap_of_the_First_Necromancer.png?09787' },
+    boots: { obtained: false, image: 'https://runescape.wiki/images/Foot_wraps_of_the_First_Necromancer.png?09787' },
+    ring: { obtained: false, image: "https://runescape.wiki/images/Occultist%27s_ring.png?d6304" }
   }
 };
 
