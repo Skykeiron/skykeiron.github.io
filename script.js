@@ -60,14 +60,9 @@ function renderTab(tab) {
 
       const img = document.createElement('img');
       img.src = item.image;
-      img.alt = item.name;
       img.onclick = () => toggleObtained(tab, slot);
 
-      const label = document.createElement('div');
-      label.textContent = item.name;
-
       slotDiv.appendChild(img);
-      slotDiv.appendChild(label);
     } else {
       slotDiv.classList.add('empty');
     }
