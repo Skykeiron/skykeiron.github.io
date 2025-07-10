@@ -35,7 +35,7 @@ const gearData = {
     ammunition: null,
     weapon: { obtained: false, image: 'https://runescape.wiki/images/Omni_guard.png?c184b' },
     body: { obtained: false, image: 'https://runescape.wiki/images/Robe_top_of_the_First_Necromancer.png?09787' },
-    offhand: { obtained: false, image: 'https://runescape.wiki/images/Soulbound_lantern.png?fbe1b',
+    offhand: { obtained: false, image: 'https://runescape.wiki/images/Soulbound_lantern.png?fbe1b' },
     empty2: null,
     legs: { obtained: false, image: 'https://runescape.wiki/images/Robe_bottom_of_the_First_Necromancer.png?09787' },
     empty3: null,
