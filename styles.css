@@ -57,7 +57,7 @@ nav {
 .slot {
   width: 80px;
   height: 80px;
-  background-color: #1e2228;
+  background-color: #0d1117;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -67,7 +67,6 @@ nav {
   font-size: 12px;
   color: white;
   position: relative;
-  opacity: 0;
 }
 
 .slot img {
@@ -80,7 +79,6 @@ nav {
   border: 2px solid white;
   border-radius: 4px;
   box-sizing: border-box;
-  opacity: 100;
 }
 
 .slot.obtained img {
