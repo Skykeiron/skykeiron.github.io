@@ -15,7 +15,8 @@ const gearData = {
     gloves: { obtained: false, image: 'https://runescape.wiki/images/Masterwork_magic_gloves.png?a406e' },
     gloves2: { obtained: false, image: 'https://runescape.wiki/images/Cinderbane_gloves.png?99549' },
     boots: { obtained: false, image: 'https://runescape.wiki/images/Masterwork_magic_boots.png?08a82' },
-    ring: { obtained: false, image: "https://runescape.wiki/images/Reaver%27s_ring.png?973ed" }
+    ring: { obtained: false, image: "https://runescape.wiki/images/Reaver%27s_ring.png?973ed" },
+    ring2: { obtained: false, image: "https://runescape.wiki/images/Channeller%27s_ring.png?36cdc" }
   },
   ranged: {
     empty1: null, empty2: null, empty3: null,
@@ -56,7 +57,7 @@ const slotOrder = [
   'empty2','cape', 'amulet', 'ammunition',
   'weapon2','weapon', 'body', 'offhand',
   'empty4','empty5', 'legs', 'empty6',
-  'gloves2', 'gloves', 'boots', 'ring', 'empty7'
+  'gloves2', 'gloves', 'boots', 'ring', 'ring2'
 ];
 
 function renderTab(tab) {
