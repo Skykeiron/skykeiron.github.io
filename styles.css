@@ -48,7 +48,7 @@ nav {
 
 .tab.active {
   display: grid;
-  grid-template-columns: repeat(3, 80px);
+  grid-template-columns: repeat(5, 80px);
   grid-template-rows: repeat(5, 80px);
   gap: 10px;
   justify-content: center;
