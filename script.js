@@ -13,6 +13,7 @@ const gearData = {
     legs: { obtained: false, image: 'https://runescape.wiki/images/Elite_tectonic_robe_bottom.png?c2107' },
     empty3: null,
     gloves: { obtained: false, image: 'https://runescape.wiki/images/Masterwork_magic_gloves.png?a406e' },
+    gloves2: { obtained: false, image: 'https://runescape.wiki/images/Cinderbane_gloves.png?99549' },
     boots: { obtained: false, image: 'https://runescape.wiki/images/Masterwork_magic_boots.png?08a82' },
     ring: { obtained: false, image: "https://runescape.wiki/images/Reaver%27s_ring.png?973ed" }
   },
@@ -40,6 +41,7 @@ const gearData = {
     legs: { obtained: false, image: 'https://runescape.wiki/images/Robe_bottom_of_the_First_Necromancer.png?09787' },
     empty3: null,
     gloves: { obtained: false, image: 'https://runescape.wiki/images/Hand_wrap_of_the_First_Necromancer.png?09787' },
+    gloves2: { obtained: false, image: 'https://runescape.wiki/images/Cinderbane_gloves.png?99549' },
     boots: { obtained: false, image: 'https://runescape.wiki/images/Foot_wraps_of_the_First_Necromancer.png?09787' },
     ring: { obtained: false, image: "https://runescape.wiki/images/Occultist%27s_ring.png?d6304" }
   }
