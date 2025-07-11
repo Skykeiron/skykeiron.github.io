@@ -51,10 +51,10 @@ if (savedData) Object.assign(gearData, JSON.parse(savedData));
 // Define strict slot order to match RS equipment layout
 const slotOrder = [
   'empty1', 'helmet', 'pocket',
-  'cape', 'amulet', 'ammunition',
-  'weapon', 'body', 'offhand',
-  'empty2', 'legs', 'empty3',
-  'gloves', 'boots', 'ring'
+  'empty2','cape', 'amulet', 'ammunition',
+  'weapon2','weapon', 'body', 'offhand',
+  'empty4','empty5', 'legs', 'empty6',
+  'gloves2', 'gloves', 'boots', 'ring', 'empty7'
 ];
 
 function renderTab(tab) {
