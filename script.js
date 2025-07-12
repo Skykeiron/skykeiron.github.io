@@ -20,9 +20,25 @@ const gearData = {
     ring2: { obtained: false, image: "https://runescape.wiki/images/Channeller%27s_ring.png?36cdc" }
   },
   ranged: {
-    empty1: null, empty2: null, empty3: null,
-    helmet: { name: 'Pernix Cowl', obtained: false, image: 'https://runescape.wiki/images/Pernix_cowl.png?cdf2c' },
-    weapon: { name: 'Noxious Longbow', obtained: false, image: 'https://runescape.wiki/images/Noxious_longbow.png?d4e2c' }
+    empty1: null,
+    helmet: { obtained: false, image: 'https://runescape.wiki/images/Elite_Dracolich_coif.png?2d88b' },
+    pocket: { obtained: false, image: "https://runescape.wiki/images/Erethdor%27s_grimoire_%28token%29.png?d18a8" },
+    cape: { obtained: false, image: "https://runescape.wiki/images/Igneous_Kal-Ket.png?e34c7" },
+    amulet: { obtained: false, image: 'https://runescape.wiki/images/Essence_of_Finality_amulet_%28blue%29.png?77834' },
+    ammunition: null,
+    weapon: { obtained: false, image: 'https://runescape.wiki/images/Bow_of_the_Last_Guardian.png?3590a' },
+    weapon2: { obtained: false, image: 'https://runescape.wiki/images/Eldritch_crossbow.png?1c815' },
+    body: { obtained: false, image: 'https://runescape.wiki/images/Elite_Dracolich_hauberk.png?5e7d5' },
+    offhand: null,
+    empty2: null,
+    legs: { obtained: false, image: 'https://runescape.wiki/images/Elite_Dracolich_chaps.png?11a80' },
+    empty3: null,
+    gloves: { obtained: false, image: 'https://runescape.wiki/images/Elite_Dracolich_vambraces.png?aeaf6' },
+    gloves2: { obtained: false, image: 'https://runescape.wiki/images/Cinderbane_gloves.png?99549' },
+    boots: { obtained: false, image: 'https://runescape.wiki/images/Elite_Dracolich_boots.png?67618' },
+    boots1: { obtained: false, image: 'https://runescape.wiki/images/Enhanced_fleeting_boots.png?8cac6' },
+    ring: { obtained: false, image: "https://runescape.wiki/images/Reaver%27s_ring.png?973ed" },
+    ring2: { obtained: false, image: "https://runescape.wiki/images/Stalker%27s_ring.png?d41c1" }
   },
   melee: {
     empty1: null, empty2: null, empty3: null,
