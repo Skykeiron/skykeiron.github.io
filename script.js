@@ -58,7 +58,9 @@ const slotOrder = [
   'empty4','cape', 'amulet', 'ammunition', 'empty5',
   'weapon2','weapon', 'body', 'offhand', 'empty6',
   'empty7','empty8', 'legs', 'empty9', 'empty10',
-  'gloves2', 'gloves', 'boots', 'ring', 'ring2'
+  'gloves2', 'gloves', 'boots', 'ring', 'ring2',
+  'empty11', 'empty12', 'boots1', 'empty13', 'empty14'
+
 ];
 
 function renderTab(tab) {
