@@ -25,7 +25,7 @@ const gearData = {
     pocket: { obtained: false, image: "https://runescape.wiki/images/Erethdor%27s_grimoire_%28token%29.png?d18a8" },
     cape: { obtained: false, image: "https://runescape.wiki/images/Igneous_Kal-Ket.png?e34c7" },
     amulet: { obtained: false, image: 'https://runescape.wiki/images/Essence_of_Finality_amulet_%28blue%29.png?77834' },
-    ammunition: null,
+    ammunition: { obtained: false, image: 'https://runescape.wiki/images/Pernix%27s_quiver.png?ba280' },
     weapon: { obtained: false, image: 'https://runescape.wiki/images/Bow_of_the_Last_Guardian.png?3590a' },
     weapon2: { obtained: false, image: 'https://runescape.wiki/images/Eldritch_crossbow.png?1c815' },
     body: { obtained: false, image: 'https://runescape.wiki/images/Elite_Dracolich_hauberk.png?5e7d5' },
